@@ -41,7 +41,7 @@ jobs:
       - name: Generate Android App Icon
         run: |
           mkdir -p resources
-          cp public/icon.png resources/icon.png
+          cp public/assets/aistudio/icon.png resources/icon.png
           npx capacitor-assets generate --android
 
       - name: Sync Capacitor
