@@ -1,0 +1,6 @@
+{
+  "name": "XP Vault",
+  "description": "Encrypted local-first privacy vault for secure storage of photos, videos, documents, notes, and passwords.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
