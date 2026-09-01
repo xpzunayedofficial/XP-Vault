@@ -29,6 +29,7 @@ jobs:
       - name: Install Capacitor
         run: |
           npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install --save-dev @capacitor/assets
 
       - name: Initialize Capacitor
         run: |
@@ -36,6 +37,12 @@ jobs:
 
       - name: Add Android platform
         run: npx cap add android
+
+      - name: Generate Android App Icon
+        run: |
+          mkdir -p resources
+          cp public/icon.png resources/icon.png
+          npx capacitor-assets generate --android
 
       - name: Sync Capacitor
         run: npx cap sync android
